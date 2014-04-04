@@ -1,6 +1,10 @@
+<?php
+print <<<EOT
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php print $page_title; ?></title>
-		
+		<title>$page_title</title>
+		<link rel="stylesheet" type="text/css" href="/foundation/css/custom.css">
 	</head>
+EOT;
+?>
