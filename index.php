@@ -5,12 +5,8 @@ $page_title = $_SERVER['REQUEST_URI'];
 $body = 'app/app.php';
 
 switch($page_title) {
-	case '/':
-	
-		$page_title = 'Icebreaker';
-		break;
 	default:
-		$page_title = 'Not Found';
+		$page_title = 'Icebreaker';
 }
 
 include_once "$baseInclude/header.inc";

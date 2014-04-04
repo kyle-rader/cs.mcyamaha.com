@@ -1,3 +1,3 @@
-<?php 
-print 'I am the main app!';
-?>
+<div class="container">
+	I am the main app!
+</div>
