@@ -1,0 +1,62 @@
+body {
+	padding-top:45px;
+}
+
+.footer-fixed {
+	height:25px;
+	color: white;
+	background: #333333;
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	padding-top:5px;
+	z-index:10;
+}
+
+.xtiny {
+	padding: 5px !important;
+	margin: 10px !important;
+	border-bottom:5px;
+	display: block;
+}
+
+hr.hr-color {
+	margin:0;
+	padding-top:10px;
+	margin-bottom:20px;}
+hr.hr-small {
+	margin-top: 10px;
+	margin-bottom:10px;}
+
+/* Side Bar CSS */
+ul.side-nav {
+	padding:0;}
+div.sidebar.panel {
+	padding:0;}
+div.sidebar.panel ul li {
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:20px;
+	padding-left:20px;
+	border-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style:none;
+	border-left-style:none;
+	border-color: #f2f2f2;}
+div.sidebar.panel ul li:hover {
+	border-color: #d9d9d9;
+	background-color:#eee}
+div.sidebar.panel ul li.active {
+	border-color: #d9d9d9;
+	background-color: #e9e9e9;}
+div.sidebar.panel ul li.active a {
+	font-weight:bold;}
+div.sidebar.panel ul li.heading {
+	font-family:"Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size:14pt;}
+div.sidebar.panel ul li.heading:hover {
+	border-color: #f2f2f2;
+	background-color: #f2f2f2;
+}
