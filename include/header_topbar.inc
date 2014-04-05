@@ -29,7 +29,7 @@
 
 			<!-- Left Nav Section -->
 			<ul class="left">
-				<li><a class="top-btn" data-target="home">Home</a></li>
+				<li class="active"><a class="top-btn" data-target="home">Home</a></li>
 				<li class="has-dropdown">
 					<a href="#">TA Classes</a>
 					<ul class="dropdown">

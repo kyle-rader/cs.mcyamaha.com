@@ -2,12 +2,9 @@
 $baseInclude = $_SERVER['DOCUMENT_ROOT'] . '/include';
 $page_title = $_SERVER['REQUEST_URI'];
 
-$body = '';
-
 switch($page_title) {
 	default:
 		$page_title = 'CS Mcyamaha.com';
-		$body = 'app/app.php';
 }
 ?>
 
@@ -20,11 +17,13 @@ switch($page_title) {
 			<?php include_once "$baseInclude/header_topbar.inc"; ?>
 		</div>
 		<div id="content">
-			<?php include_once "$body"; ?>
 		</div>
 		<div id="footer">
 			<?php include_once "$baseInclude/footer.inc"; ?>
 		</div>
 	</div>
 </body>
+<script>
+<?php include_once "$baseInclude/index.js"; ?>
+</script>
 </html>
