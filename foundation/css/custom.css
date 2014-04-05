@@ -1,5 +1,8 @@
-body {
-	background-image:url('../../img/ubuntu-dark.png');
-	scroll:none;
+body { 
+  background: url('../../img/ubuntu-dark.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 

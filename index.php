@@ -2,19 +2,19 @@
 $baseInclude = $_SERVER['DOCUMENT_ROOT'] . '/include';
 $page_title = $_SERVER['REQUEST_URI'];
 
-$body = 'app/app.php';
+$body = '';
 
 switch($page_title) {
 	default:
-		$page_title = 'Icebreaker';
+		$page_title = 'CS Mcyamaha.com';
+		$body = 'app/app.php';
 }
-
-include_once "$baseInclude/header.inc";
-include_once "$baseInclude/resource.inc";
-
-print '<body>';
-include_once "$body";
-print '</body>';
-print '</html>';
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<?php include_once "$baseInclude/header.inc"; ?>
+<body>
+<?php include_once "$body"; ?>
+</body>
+</html>
