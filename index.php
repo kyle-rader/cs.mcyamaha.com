@@ -15,6 +15,14 @@ switch($page_title) {
 <html>
 <?php include_once "$baseInclude/header.inc"; ?>
 <body>
-<?php include_once "$body"; ?>
+	<div id="wrapper">
+		<div id="header"></div>
+		<div id="content">
+			<?php include_once "$body"; ?>
+		</div>
+		<div id="footer">
+			<?php include_once "$baseInclude/footer.inc"; ?>
+		</div>
+	</div>
 </body>
 </html>
