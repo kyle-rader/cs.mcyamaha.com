@@ -7,9 +7,20 @@ $(document).ready(function() {
 function LoadPage(page) {
 	var content = $('#content');
 	if (content.text() != '') {
-		content.fadeOut(75);
-	}
-	$.get('/ajax/get_page.php?page=' + page, function(response) {
-		content.html(response).fadeIn();
-	});
+		content.fadeOut(50, function() {
+			$.get('/ajax/get_page.php?page=' + page, function(response) {
+				content.html(response).fadeIn(250);
+			});
+		});
+	} else {
+		$.get('/ajax/get_page.php?page=' + page, function(response) {
+			content.html(response).fadeIn(250);
+		});
+	}	
 };
+
+$(document).on('click', 'a.top-btn', function(event) {
+	var page = $(this).attr('data-target');
+	console.log(page);
+	LoadPage(page);
+});
