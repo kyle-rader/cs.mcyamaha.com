@@ -1,3 +1,4 @@
-<div class="container">
-	I am the main app!
+<div class="row">
+	<h2>Kyle's TA Website</h2>
+	<hr>
 </div>

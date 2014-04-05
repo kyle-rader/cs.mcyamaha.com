@@ -9,7 +9,6 @@ body {
 	position:relative;
 }
 #header {
-	padding:10px;
 }
 #content {
 	padding:10px;
@@ -32,5 +31,9 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	color:#bbbbbb;
 }
 
+nav.top-bar {
+	background:transparent;
+}

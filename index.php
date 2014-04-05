@@ -16,7 +16,9 @@ switch($page_title) {
 <?php include_once "$baseInclude/header.inc"; ?>
 <body>
 	<div id="wrapper">
-		<div id="header"></div>
+		<div id="header">
+			<?php include_once "$baseInclude/header_topbar.inc"; ?>
+		</div>
 		<div id="content">
 			<?php include_once "$body"; ?>
 		</div>
