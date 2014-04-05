@@ -45,3 +45,19 @@ ul.icon-group {
 ul.icon-group li {
 	display:inline;
 }
+
+i.fi-social-linkedin {
+	color:#1a85bd;
+}
+i.fi-social-linkedin:hover {
+	text-shadow: 0 0 4px #1a85bd;
+}
+i.fi-mail,
+i.fi-social-github {
+	color:#bbb;
+}
+i.fi-mail:hover,
+i.fi-social-github:hover {
+	text-shadow: 0 0 4px #bbb;
+}
+
