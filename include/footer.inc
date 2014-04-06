@@ -6,7 +6,7 @@
 		Director of Engineering: <a href="https://secure.agiplanner.com">AgiPlanner</a>
 	</div>
 		<div class="large-3 large-offset-5 columns">
-		<?php PrintIcons(); ?>
+		<?php print GetIcons(); ?>
 	</div>
 </div>
 <script>

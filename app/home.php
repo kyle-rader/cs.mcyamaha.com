@@ -1,15 +1,10 @@
-<div class="row">
-	<div class="large-12 columns">
-		<div class="left">
+<?php 
+$title = <<<EOT
 			<h2>Kyle's TA Website</h2>
 			<small>Here are some of my favorite teaching things.</small>
-		</div>
-		<div class="right">
-			<?php PrintIcons(); ?>
-		</div>
-		<hr>
-	</div>
-</div>
+EOT;
+print PageTitle($title);
+?>
 <div class="row">
 	<div class="large-7 columns">
 		<blockquote>
