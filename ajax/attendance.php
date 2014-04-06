@@ -1,6 +1,7 @@
 <?php
 include_once "include/top_ajax.inc";
 include_once "$baseInclude/db.inc";
+$conf = parse_ini_file("../.config/attendance.ini");
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST')
 {
@@ -13,43 +14,66 @@ else if (!isset($_POST['first']) || !isset($_POST['last']) || !isset($_POST['w_n
 	exit();
 }
 
-$debug = '';
-
+$message = '';
 $first = strtolower((string)$_POST['first']);
 $last  = strtolower((string)$_POST['last']);
-$w_num = (int)$_POST['w_number'];
-$crn   = (int)$_POST['crn'];
+$w_num = (string)$_POST['w_number'];
+$crn   = (string)$_POST['crn'];
 $ip    = (string)$_SERVER['REMOTE_ADDR'];
 $code  = isset($_POST['code']) ? $_POST['code'] : '';
 $result = false;
 
-$debug .= "first:$first, last:$last, w:$w_num, crn:$crn, ip:$ip, code:$code";
-if ((strlen($first) > 0) && (strlen($last) > 0) && ($w_num > 0) && ($crn > 0))
+if (substr($ip, 0, 11) != '140.160.138')
 {
-	$sql = <<<EOT
+	$message = "You must sign in from a WWU CS Lab.";
+}
+else if ((strlen($first) > 0) && (strlen($last) > 0) && (strlen($w_num) > 0) && (strlen($crn) > 0))
+{
+	$sql1 = <<<EOT
+select COUNT(*) AS count FROM attendance
+WHERE
+ `DATE` = (SELECT CURDATE())
+ AND (`W_NUMBER` = ? OR `IP_ADDRESS` = ? OR (`FIRST_NAME` = ? AND `LAST_NAME` = ?));
+EOT;
+	if($stmt1 = $mysqli->prepare($sql1))
+	{
+		$stmt1->bind_param('ssss', $w_num, $ip, $first, $last);
+		$stmt1->execute();
+		$stmt1->bind_result($count);
+		if($stmt1->fetch())
+		{
+			if(($count == 0) || ($code == $conf['code']))
+			{
+				$sql2 = <<<EOT
 INSERT INTO attendance (
  CRN,
  FIRST_NAME, 
  LAST_NAME,
  W_NUMBER,
  IP_ADDRESS,
- CODE)
-VALUES (?,?,?,?,?,?);
+ CODE,
+ DATE)
+VALUES (?,?,?,?,?,?, (SELECT CURDATE()));
 EOT;
-	$debug .= '  made sql  ';
-	if($stmt = $mysqli->prepare($sql))
-	{
-		$debug .= ' prepped  ';
-		$stmt->bind_param('isssss', $crn, $first, $last, $w_num, $ip, $code);
-		if($stmt->execute())
-		{
-			$mysqli->commit();
-			$result = true;
+				if($stmt2 = $mysqli2->prepare($sql2))
+				{
+					$stmt2->bind_param('isssss', $crn, $first, $last, $w_num, $ip, $code);
+					if($stmt2->execute())
+					{
+						$mysqli->commit();
+						$result = true;
+						$message = "Great you're here";
+					}
+					$stmt2->close();
+				}
+			}
+			else {
+				$message = 'You have already signed in today!';
+			}
 		}
-		$stmt->close();
+		$stmt1->close();
 	}
-	$debug .= "  error:" . $mysqli->error;
 }
 
-print json_encode(Array('success' => $result, 'first' => $first, 'debug' => $debug));
+print json_encode(Array('success' => $result, 'first' => ucfirst($first), 'message' => $message));
 ?>
