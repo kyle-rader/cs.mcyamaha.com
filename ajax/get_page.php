@@ -1,6 +1,7 @@
 <?php
 include_once "include/top_ajax.inc";
 include_once "$baseInclude/functions.inc";
+include_once "$baseInclude/db.inc";
 
 if ($_SERVER['REQUEST_METHOD'] != 'GET')
 {
@@ -14,7 +15,7 @@ else if (!isset($_GET['page']))
 }
 
 $page = $_GET['page'];
-// Get the Home app.
+
 if (file_exists("$baseAppInclude/$page.php"))
 {
 	include_once "$baseAppInclude/$page.php";

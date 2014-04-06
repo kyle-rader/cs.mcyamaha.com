@@ -1,6 +1,5 @@
 <?php 
 // The IceBreaker App
-include_once "$baseInclude/db.inc";
 
 $title = <<<EOT
 <h2>Ice Breaker!</h2>
