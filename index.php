@@ -2,6 +2,8 @@
 $baseInclude = $_SERVER['DOCUMENT_ROOT'] . '/include';
 $page_title = $_SERVER['REQUEST_URI'];
 
+include_once "$baseInclude/functions.inc";
+
 switch($page_title) {
 	default:
 		$page_title = 'CS Mcyamaha.com';

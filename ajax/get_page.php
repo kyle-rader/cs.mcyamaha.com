@@ -1,5 +1,6 @@
 <?php
 include_once "include/top_ajax.inc";
+include_once "$baseInclude/functions.inc";
 
 if ($_SERVER['REQUEST_METHOD'] != 'GET')
 {
