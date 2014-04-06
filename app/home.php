@@ -29,6 +29,7 @@
 	</div>
 </div>
 <br>
+<!-- Ken Robinson Videos -->
 <div class="row-wide">
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
@@ -46,6 +47,7 @@
 		</div>
 	</div>
 </div>
+<!-- Taylor Mali videos -->
 <div class="row">
 	<div class="large-6 columns">
 		<div class="flex-video">
@@ -57,4 +59,25 @@
 			<iframe width="480" height="360" src="//www.youtube.com/embed/OEBZkWkkdZA" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
+</div>
+<!-- TED Music -->
+<div class="row-wide">
+	<div class="large-4 columns">
+		<div class="flex-video widescreen">
+			<iframe src="http://embed.ted.com/talks/benjamin_zander_on_music_and_passion.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>		
+	</div>
+	<div class="large-4 columns">
+		<div class="flex-video widescreen">
+			<iframe src="http://embed.ted.com/talks/robert_gupta.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<div class="flex-video widescreen">
+			<iframe src="http://embed.ted.com/talks/simon_sinek_how_great_leaders_inspire_action.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+</div>
+<div class="row">
+&nbsp
 </div>
