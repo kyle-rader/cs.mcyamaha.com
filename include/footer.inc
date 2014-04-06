@@ -1,12 +1,14 @@
 <div class="row">
-	<div class="large-4 columns">
-		Kyle W. Rader
-		<br><br>
-		WWU ACM Activities Coordinator<br>
-		Director of Engineering: <a href="https://secure.agiplanner.com">AgiPlanner</a>
-	</div>
-		<div class="large-3 large-offset-5 columns">
-		<?php print GetIcons(); ?>
+	<div class="large-12 columns">
+		<div class="left">
+			Kyle W. Rader
+			<br><br>
+			WWU ACM Activities Coordinator<br>
+			Director of Engineering: <a href="https://secure.agiplanner.com">AgiPlanner</a>
+		</div>
+		<div class="right">
+			<?php print GetIcons(); ?>
+		</div>
 	</div>
 </div>
 <script>
