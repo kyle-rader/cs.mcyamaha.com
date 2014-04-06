@@ -4,6 +4,7 @@ print <<<EOT
 <head>
 	<title>$page_title</title>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="/img/favicon.ico">
 	<script src="/foundation/js/jquery.js"></script>
 	<script src="/foundation/js/modernizr.js"></script>
 	<script src="/foundation/js/foundation.min.js"></script>
