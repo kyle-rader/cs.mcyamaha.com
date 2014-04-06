@@ -12,11 +12,11 @@ body {
 }
 #content {
 	padding:10px;
-	padding-bottom:80px;   /* Height of the footer element */
+	padding-bottom:100px;;   /* Height of the footer element */
 }
 #footer {
 	width:100%;
-	height:130px;
+	height:100px;
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -33,7 +33,10 @@ body {
 	background-size: cover;
 	color:#bbbbbb;
 }
-
+.row-wide {
+	margin-left:5%;
+	margin-right:5%;
+}
 nav.top-bar {
 	background:transparent;
 }
@@ -41,6 +44,7 @@ nav.top-bar {
 ul.icon-group {
 	font-size:50pt;
 	list-style-type:none;
+	margin:0;
 }
 ul.icon-group li {
 	display:inline;
@@ -59,5 +63,17 @@ i.fi-social-github {
 i.fi-mail:hover,
 i.fi-social-github:hover {
 	text-shadow: 0 0 4px #bbb;
+}
+blockquote {
+	color:#bbb;
+} blockquote cite {
+	color:#999;
+}
+
+.top-icons {
+	float:right;
+	position:relative;
+	z-index:10;
+	top:50;
 }
 

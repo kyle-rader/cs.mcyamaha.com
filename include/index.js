@@ -21,6 +21,5 @@ function LoadPage(page) {
 
 $(document).on('click', 'a.top-btn', function(event) {
 	var page = $(this).attr('data-target');
-	console.log(page);
 	LoadPage(page);
 });
