@@ -23,7 +23,7 @@ $ip    = (string)$_SERVER['REMOTE_ADDR'];
 $code  = isset($_POST['code']) ? $_POST['code'] : '';
 $result = false;
 
-if (substr($ip, 0, 11) != '140.160.138')
+if (substr($ip, 0, 11) != $conf['lab_ip'])
 {
 	$message = "You must sign in from a WWU CS Lab.";
 }

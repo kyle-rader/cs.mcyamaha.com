@@ -9,7 +9,6 @@ print PageTitle($title);
 ?>
 <div class="row">
 	<div class="small-6 columns">
-
 	</div>
 	<div class="small-6 columns">
 		<div class="attendance right">
@@ -37,7 +36,7 @@ print PageTitle($title);
 				</div>
 				<div class="row">
 					<div class="small-6 columns">
-						<input type="text" name="code" placeholder="Code"/>
+						<input type="password" name="code" placeholder="Code"/>
 					</div>
 					<div class="small-6 columns">
 						<input class="button postfix" type="submit" name="here" value="Here!"/>
@@ -72,7 +71,8 @@ $(document).on('submit', '#attendance', function(event) {
 		} else {
 			bad.text(info.first + ', ' + info.message).fadeIn(100);
 			setTimeout(function() { bad.fadeOut(750); }, 5000);
-		}				
+		}
+		$('#attendance').find('input').prop('value', '');
 	});
 });
 </script>
