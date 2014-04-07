@@ -8,6 +8,7 @@
 					<a href="#">Resources</a>
 					<ul class="dropdown">
 						<li><a target=_blank href="http://www.tutorialspoint.com/computer_programming/index.htm">Tutorials Point</a></li>
+						<li><a target=_blank href="http://stackoverflow.com">Stack Overflow</a></li>
 						<li><a target=_blank href="http://www.codecademy.com/">Code Academy</a></li>
 						<li><a target=_blank href="http://foundation.zurb.com/">Zurb Foundation</a></li>
 						<li><a target=_blank href="http://www.reddit.com/r/web_design/">r/ Web Design</a></li>
