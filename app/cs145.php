@@ -2,7 +2,7 @@
 // The CSCI 145 App
 $title = <<<EOT
 <h2>CSCI 145</h2>
-<small>When things start getting interesting</small>
+<small>Now things get interesting</small>
 EOT;
 print PageTitle($title);
 

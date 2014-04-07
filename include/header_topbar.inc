@@ -19,7 +19,7 @@
 					<a href="">CS @ WWU</a>
 					<ul class="dropdown">
 						<li><a target=_blank href="https://cst.wwu.edu/computer-science">WWU CS Home</a></li>
-						<li><a target=_blank href="http://support.cs.wwu.edu/index.php/Main_Page#Dreamspark_Premium_.28Formerly_DAA_.28Formerly_MSDNAA.29.29_Information">Get Free Software</a></li>
+						<li><a target=_blank href="http://support.cs.wwu.edu/index.php/Main_Page">CS Support</a></li>
 						<li><a target=_blank href="http://sw.cs.wwu.edu/~nordwap/index.php">Web Cams</a></li>
 						<li><a target=_blank href="http://sw.cs.wwu.edu/~fugiera/dev/labStat2.php">Lab Stats</a></li>
 						<li><a target=_blank href="http://acm.wwu.edu/">ACM</a></li>

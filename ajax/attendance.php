@@ -17,7 +17,7 @@ else if (!isset($_POST['first']) || !isset($_POST['last']) || !isset($_POST['w_n
 $message = '';
 $first = strtolower((string)$_POST['first']);
 $last  = strtolower((string)$_POST['last']);
-$w_num = (string)$_POST['w_number'];
+$w_num = strtolower((string)$_POST['w_number']);
 $crn   = (string)$_POST['crn'];
 $ip    = (string)$_SERVER['REMOTE_ADDR'];
 $code  = isset($_POST['code']) ? $_POST['code'] : '';
