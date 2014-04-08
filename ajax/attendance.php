@@ -22,8 +22,9 @@ $crn   = (string)$_POST['crn'];
 $ip    = (string)$_SERVER['REMOTE_ADDR'];
 $code  = isset($_POST['code']) ? $_POST['code'] : '';
 $result = false;
+$override = $code == md5($conf['code']);
 
-if (substr($ip, 0, 11) != $conf['lab_ip'])
+if ((substr($ip, 0, 11) != $conf['lab_ip']) && !$override)
 {
 	$message = "You must sign in from a WWU CS Lab.";
 }
@@ -42,7 +43,7 @@ EOT;
 		$stmt1->bind_result($count);
 		if($stmt1->fetch())
 		{
-			if(($count == 0) || ($code == $conf['code']))
+			if(($count == 0) || $override)
 			{
 				$sql2 = <<<EOT
 INSERT INTO attendance (

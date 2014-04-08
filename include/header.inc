@@ -9,6 +9,7 @@ print <<<EOT
 	<script src="/foundation/js/modernizr.js"></script>
 	<script src="/foundation/js/foundation.min.js"></script>
 	<script src="/foundation/js/vendor/fastclick.js"></script>
+	<script src="/foundation/js/jquery.md5.js"></script>
 	<link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
 	<link rel="stylesheet" type="text/css" href="/foundation/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/foundation-icons/foundation-icons.css">

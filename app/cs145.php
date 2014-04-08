@@ -59,11 +59,16 @@ print PageTitle($title);
 $(document).on('submit', '#attendance', function(event) {
 	event.preventDefault();
 	var url = '/ajax/attendance.php';
-	var form = $(this)[0];
+	var form = $(this);
 	var good = $('#attend-success');
 	var bad = $('#attend-fail');
+	var data = {'first':form.find('input[name=first]').val(),
+				'last' :form.find('input[name=last]').val(),
+				'w_number':form.find('input[name=w_number]').val(),
+				'crn':form.find('input[name=crn]').val(),
+				'code':$.md5(form.find('input[name=code]').val())};
 
-	$.post(url, $(this).serialize(), function(response) {
+	$.post(url, data, function(response) {
 		var info = JSON.parse(response);
 		if (info.success) {
 			good.text(info.first + ', ' + info.message).fadeIn(100);
