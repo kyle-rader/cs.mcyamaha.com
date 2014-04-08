@@ -77,7 +77,7 @@ $('#attendance').submit(function(event) {
 			bad.text(info.first + ', ' + info.message).fadeIn(100);
 			setTimeout(function() { bad.fadeOut(750); }, 5000);
 		}
-		$('#attendance').find('input').prop('value', '');
+		$('#attendance').find('input[type!=submit]').prop('value', '');
 	});
 });
 </script>
