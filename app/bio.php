@@ -3,7 +3,7 @@
 
 $title = <<<EOT
 <h2>Bio</h2>
-<small>My question to you: Why are you here?</small>
+<small>My question to you: Why are you here? (Not this website I mean this university)  Where are you going and how are you getting there?</small>
 EOT;
 
 print PageTitle($title);

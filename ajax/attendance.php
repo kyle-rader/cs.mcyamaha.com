@@ -45,6 +45,7 @@ EOT;
 		{
 			if(($count == 0) || $override)
 			{
+				$codeValue = $override ? 1 : 0;
 				$sql2 = <<<EOT
 INSERT INTO attendance (
  CRN,
@@ -54,11 +55,11 @@ INSERT INTO attendance (
  IP_ADDRESS,
  CODE,
  DATE)
-VALUES (?,?,?,?,?,?, (SELECT CURDATE()));
+VALUES (?,?,?,?,?,?, CURRENT_TIMESTAMP);
 EOT;
 				if($stmt2 = $mysqli2->prepare($sql2))
 				{
-					$stmt2->bind_param('isssss', $crn, $first, $last, $w_num, $ip, $code);
+					$stmt2->bind_param('issssi', $crn, $first, $last, $w_num, $ip, $codeValue);
 					if($stmt2->execute())
 					{
 						$mysqli->commit();

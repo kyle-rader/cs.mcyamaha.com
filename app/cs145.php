@@ -55,8 +55,8 @@ print PageTitle($title);
 	</div>
 </div>
 <script>
-
-$(document).on('submit', '#attendance', function(event) {
+$('#attendance').unbind('submit');
+$('#attendance').submit(function(event) {
 	event.preventDefault();
 	var url = '/ajax/attendance.php';
 	var form = $(this);
