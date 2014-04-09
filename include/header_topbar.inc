@@ -5,16 +5,23 @@
 			<!-- Right Nav Section -->
 			<ul class="right">
 				<li class="has-dropdown">
-					<a href="#">Funny Things</a>
+					<a href="">Funny Things</a>
 					<ul class="dropdown">
 						<li><a target=_blank href="http://www.reddit.com/r/techsupportgore">r/ Tech Support Gore</a></li>
 						<li><a target=_blank href="http://programmerryangosling.tumblr.com/">Programming Pick-up Lines</a></li>
 						<li><a target=_blank href="http://www.eecis.udel.edu/~zurawski/humor/new_os_air.html">OS Airlines</a></li>
 						<li><a target=_blank href="http://users.cms.caltech.edu/~mvanier/hacking/rants/cars.html">OS Cars</a></li>
+						<li class="has-dropdown">
+							<a href="">Videos</a>
+							<ul class="dropdown">
+								<li><a target=_blank href="https://www.youtube.com/watch?v=rT1nGjGM2p8">Key & Peel East/West Bowl 2</a></li>
+								<li><a target=_blank href="http://www.youtube.com/watch?v=_uScCrpAW4U">Key & Peel Secret Agent</a></li>
+							</ul>
+						</li>
 					</ul>
 				</li>
 				<li class="has-dropdown">
-					<a href="#">Resources</a>
+					<a href="">Resources</a>
 					<ul class="dropdown">
 						<li><a target=_blank href="http://www.tutorialspoint.com/computer_programming/index.htm">Tutorials Point</a></li>
 						<li><a target=_blank href="http://stackoverflow.com">Stack Overflow</a></li>
