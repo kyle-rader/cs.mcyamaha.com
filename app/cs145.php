@@ -47,26 +47,25 @@ print PageTitle($title);
 			<div class="row">
 				<div class="large-2 columns">
 					<label>Color</label>
-						<input type="color" name="favcolor">
+						<input type="color" name="favcolor" required>
 					
 				</div>
 				<div class="large-3 columns">
 					<label>Animal
-						<input type="text" name="favanimal">
+						<input type="text" name="favanimal" required>
 					</label>
 				</div>
 				<div class="large-3 columns">
 					<label>Beverage
-						<input type="text" name="favbeverage">
+						<input type="text" name="favbeverage" required>
 					</label>
 				</div>
 				<div class="large-4 columns">
 					<label>Place
-						<input type="text" name="favplace">
+						<input type="text" name="favplace" required>
 					</label>
 				</div>
 			</div>
-			<br>
 			<div class="row">
 				<div class="small-12 columns">
 					<label>Rate your programming experience</label>
@@ -82,11 +81,29 @@ print PageTitle($title);
 			<br>
 			<div class="row">
 				<div class="small-12 columns">
+					<label>Your favorite title (e.g. High Inquisitor Rader or Kyle, god of the Moon)
+					<input type="text" name="favtitle" required>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="small-12 columns">
 					<label>Describe your ideal TA
-					<input type="text" name="idealTA">
+					<input type="text" name="idealTA" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-4 columns small-offset-8">
+					<input class="button postfix" type="submit" name="submit" value="Submit">
 				</div>
 			</div>
 		</form>
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="alert-box survey-alert" style="display:none;">
+					Thanks!
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="small-6 columns">
 		<div class="attendance right">
@@ -132,7 +149,28 @@ print PageTitle($title);
 		</div>
 	</div>
 </div>
+
 <script>
+// SURVEY SCRIPT -----------------------------
+$('#survey-form').unbind('submit');
+$('#survey-form').submit(function(event) {
+	event.preventDefault();
+	var url = '/ajax/survey.php';
+	var form = $(this);
+	var alertBox = $('.survey-alert');
+
+	$.post(url, $(this).serialize(), function(response) {
+		var info = JSON.parse(response);
+		alertBox.addClass(info.sucess ? 'success' : 'warning');
+		alertBox.text(info.message).fadeIn(100);
+		setTimeout(function() { alertBox.fadeOut(750); }, 5000);
+		$('#survey-form').find('input[type!=submit]').prop('value', '');
+		if(info.success) {
+			form.fadeOut();
+		}
+	});
+});
+//--------------------------------------------------
 $('#attendance').unbind('submit');
 $('#attendance').submit(function(event) {
 	event.preventDefault();
