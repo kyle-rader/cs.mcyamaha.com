@@ -9,6 +9,84 @@ print PageTitle($title);
 ?>
 <div class="row">
 	<div class="small-6 columns">
+		<form id="survey-form" data-abide>
+			<div class="row">
+				<div class="small-12 columns">
+					<h4>Icebreaker Survey</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-6 columns">
+					<label>Class (in years not credits)
+						<select name="class">
+							<option value="freshman" SELECTED>Freshman</option>
+							<option value="sophomore">Sophomore</option>
+							<option value="junior">Junior</option>
+							<option value="senior">Senior</option>
+							<option value="super_senior">Super Senior</option>
+						</select>
+					</label>
+				</div>
+				<div class="large-6 columns">
+					<label>Do you want to major in CS?
+						<select name="major_in_cs">
+							<option value="yes" SELECTED>Yes! &#128522;</option>
+							<option value="minor">Minor in CS</option>
+							<option value="maybe">Maybe</option>
+							<option value="no">No &#9785;</option>
+						</select>
+					</label>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-12 columns">
+					<h5>Favorites</h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-2 columns">
+					<label>Color</label>
+						<input type="color" name="favcolor">
+					
+				</div>
+				<div class="large-3 columns">
+					<label>Animal
+						<input type="text" name="favanimal">
+					</label>
+				</div>
+				<div class="large-3 columns">
+					<label>Beverage
+						<input type="text" name="favbeverage">
+					</label>
+				</div>
+				<div class="large-4 columns">
+					<label>Place
+						<input type="text" name="favplace">
+					</label>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>Rate your programming experience</label>
+					<select name="progexp">
+						<option value="none">None (how are you here?)</option>
+						<option value="noob">I took 140 or 141</option>
+						<option value="some">I wrote some code in high school</option>
+						<option value="lots">I've been programming a while</option>
+						<option value="pro">Let's dance monkeys</option>
+					</select>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>Describe your ideal TA
+					<input type="text" name="idealTA">
+				</div>
+			</div>
+		</form>
 	</div>
 	<div class="small-6 columns">
 		<div class="attendance right">
