@@ -126,7 +126,7 @@ print PageTitle($title);
 						<input type="text" name="w_number" placeholder="W########" required pattern="[wW][0-9]+"/>
 					</div>
 					<div class="small-6 columns">
-						<input type="text" name="crn" placeholder="CRN" required pattern="[0-9]+"/>
+						<input type="text" name="crn" placeholder="Lab Number (1,2, or 3)?" required pattern="[0-9]+"/>
 					</div>
 				</div>
 				<div class="row">

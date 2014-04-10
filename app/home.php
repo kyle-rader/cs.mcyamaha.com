@@ -24,17 +24,17 @@ print PageTitle($title);
 <div class="row-wide">
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/ken_robinson_says_schools_kill_creativity.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/ken_robinson_says_schools_kill_creativity.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>		
 	</div>
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/sir_ken_robinson_bring_on_the_revolution.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/sir_ken_robinson_bring_on_the_revolution.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 	</div>
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/ken_robinson_how_to_escape_education_s_death_valley.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/ken_robinson_how_to_escape_education_s_death_valley.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 	</div>
 </div>
@@ -55,17 +55,17 @@ print PageTitle($title);
 <div class="row-wide">
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/benjamin_zander_on_music_and_passion.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/benjamin_zander_on_music_and_passion.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>		
 	</div>
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/robert_gupta.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/robert_gupta.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 	</div>
 	<div class="large-4 columns">
 		<div class="flex-video widescreen">
-			<iframe src="http://embed.ted.com/talks/simon_sinek_how_great_leaders_inspire_action.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://embed.ted.com/talks/simon_sinek_how_great_leaders_inspire_action.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 	</div>
 </div>
