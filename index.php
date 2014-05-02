@@ -6,7 +6,7 @@ include_once "$baseInclude/functions.inc";
 
 switch($page_title) {
 	default:
-		$page_title = 'CS Mcyamaha.com';
+		$page_title = 'Kyle Rader';
 }
 ?>
 

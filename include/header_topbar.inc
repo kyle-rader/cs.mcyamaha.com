@@ -54,6 +54,7 @@
 					</ul>
 				</li>
 				<li><a class="top-btn" data-target="bio">Bio</a></li>
+				<li><a class="top-btn" data-target="videos">Videos</a></li>
 			</ul>
 		</section>
 	</nav>
