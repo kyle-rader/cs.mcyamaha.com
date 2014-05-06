@@ -18,23 +18,27 @@ print PageTitle($title);
 				</div>
 				<div class="row">
 					<div class="small-6 columns">
+						<label>First</label>
 						<input type="text" name="first" placeholder="First Name" required pattern="[a-zA-Z]+"/>
 					</div>
 					<div class="small-6 columns">
+						<label>Last</label>
 						<input type="text" name="last" placeholder="Last Name" required pattern="[a-zA-Z]+"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="small-6 columns">
+						<label>W Number</label>
 						<input type="text" name="w_number" placeholder="W########" required pattern="[wW][0-9]+"/>
 					</div>
 					<div class="small-6 columns">
+						<label>Your lab # ( 1, 2 or 3)</label>
 						<input type="text" name="crn" placeholder="Lab Number (1,2, or 3)?" required pattern="[0-9]+"/>
 					</div>
 				</div>
 				<div class="row">
 					<div class="small-6 columns">
-						<input type="password" name="code" placeholder="Code"/>
+						<input type="password" name="code" placeholder="For TA use only"/>
 					</div>
 					<div class="small-6 columns">
 						<input class="button postfix" type="submit" name="here" value="Here!"/>
