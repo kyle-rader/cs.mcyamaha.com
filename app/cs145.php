@@ -8,7 +8,49 @@ print PageTitle($title);
 
 ?>
 <div class="row">
-	<div class="small-6 small-offset-6 columns">
+	<div class="small-6 columns">
+		<form id="feedback" data-abide>
+			<input type="hidden" name="lab" value="145s14">
+			<div class="row">
+				<div class="small-12 columns">
+					<h4>Feedback</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-6 columns">
+					<label>Class</label>
+					<select type="text" name="class">
+						<option value="freshman">Freshman</option>
+						<option value="sophomore">Sophomore</option>
+						<option value="junior">Junior</option>
+						<option value="senior">Senior</option>
+					</select>
+				</div>
+				<div class="small-6 columns">
+					<label>Major or intended major:</label>
+					<input type="text" name="major" placeholder="CS?" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<label>Feedback:</label>
+					<textarea name="message" placeholder="What's good? What's bad?" required></textarea>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="small-8 columns">
+					<div id="feedback-alert" class="alert-box success" style="display:none;">
+						Thank you for the feedback!
+					</div>
+				</div>
+				<div class="small-4 columns">
+					<input class="button postfix" type="submit" name="submit" value="Give Feedback"/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="small-6 columns">
 		<div class="attendance right">
 			<form id="attendance" data-abide>
 				<div class="row">
@@ -59,24 +101,23 @@ print PageTitle($title);
 
 <script>
 // SURVEY SCRIPT -----------------------------
-$('#survey-form').unbind('submit');
-$('#survey-form').submit(function(event) {
+$('#feedback').unbind('submit');
+$('#feedback').submit(function(event) {
 	event.preventDefault();
 	var url = '/ajax/survey.php';
 	var form = $(this);
-	var alertBox = $('.survey-alert');
+	var alertBox = $('#feedback-alert');
 
 	$.post(url, $(this).serialize(), function(response) {
 		var info = JSON.parse(response);
-		alertBox.addClass(info.sucess ? 'success' : 'warning');
-		alertBox.text(info.message).fadeIn(100);
+		alertBox.addClass(info.success ? 'success' : 'warning');
+		alertBox.text(info.success ? 'Thank you!' : 'Something went wrong o.0').fadeIn(100);
 		setTimeout(function() { alertBox.fadeOut(750); }, 5000);
-		$('#survey-form').find('input[type!=submit]').prop('value', '');
-		if(info.success) {
-			form.fadeOut();
-		}
+		form.find('input[type=text]').prop('value', '');
+		form.find('textarea').prop('value', '');
 	});
 });
+
 //--------------------------------------------------
 $('#attendance').unbind('submit');
 $('#attendance').submit(function(event) {

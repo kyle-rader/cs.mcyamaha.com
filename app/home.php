@@ -6,16 +6,22 @@ EOT;
 print PageTitle($title);
 ?>
 <div class="row">
-	<div class="large-7 columns">
+	<div class="large-4 columns">
 		<blockquote>
 			Tell me and I forget, teach me and I may remember, involve me and I learn.
 			<cite>Benjamin Franklin</cite>
 		</blockquote>
 	</div>
-	<div class="large-5 columns">
+	<div class="large-4 columns">
 		<blockquote>
 			Only a life lived for others is a life worthwhile.
 			<cite>Albert Einstein</cite>
+		</blockquote>
+	</div>
+	<div class="large-4 columns">
+		<blockquote>
+			Education is not about filling buckets. It's about lighting fires.
+			<cite>William Butler Yeats</cite>
 		</blockquote>
 	</div>
 </div>

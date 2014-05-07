@@ -1,7 +1,6 @@
 <?php
 include_once "include/top_ajax.inc";
 include_once "$baseInclude/db.inc";
-$conf = parse_ini_file("../.config/attendance.ini");
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST')
 {
@@ -9,83 +8,41 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST')
 	exit();
 }
 else if (!isset($_POST['class']) ||
-		 !isset($_POST['major_in_cs']) ||
-		 !isset($_POST['favcolor']) ||
-		 !isset($_POST['favanimal']) || 
-		 !isset($_POST['favbeverage']) || 
-		 !isset($_POST['favplace']) || 
-		 !isset($_POST['progexp']) || 
-		 !isset($_POST['favtitle']) || 
-		 !isset($_POST['idealTA']))
+		 !isset($_POST['major']) ||
+		 !isset($_POST['message']) ||
+		 !isset($_POST['lab']))
 {
 	header("HTTP/1.0 400 Missing data in post.");
 	exit();
 }
 
-$message = '';
-$result = false;
+$success = false;
+
 $class   = $_POST['class'];
-$major   = $_POST['major_in_cs'];
-$color   = (string)$_POST['favcolor'];
-$drink   = $_POST['favbeverage'];
-$animal  = $_POST['favanimal'];
-$place   = $_POST['favplace'];
-$progexp = $_POST['progexp'];
-$title   = $_POST['favtitle'];
-$idealTA = $_POST['idealTA'];
-$ip    = (string)$_SERVER['REMOTE_ADDR'];
-$ip_used = false;
+$major   = $_POST['major'];
+$message = $_POST['message'];
+$lab     = $_POST['lab'];
+$ip      = (string)$_SERVER['REMOTE_ADDR'];
 
-$sql1 = <<<EOT
-select COUNT(*) AS count FROM demographics
-WHERE
- DATE >= DATE_SUB(NOW(), INTERVAL 2 HOUR)
- AND `IP_ADDRESS` = ?;
-EOT;
-if($stmt1 = $mysqli->prepare($sql1))
-{
-	$stmt1->bind_param('s', $ip);
-	$stmt1->execute();
-	$stmt1->bind_result($count);
-	if($stmt1->fetch())
-	{
-		$ip_used = ($count > 0);
-	}
-	$stmt1->close();
-}
-
-if(!$ip_used)
-{
-	$sql2 = <<<EOT
-INSERT INTO demographics (
+$sql = <<<EOT
+INSERT INTO feedback (
  CLASS,
  MAJOR,
- COLOR,
- ANIMAL,
- DRINK,
- PLACE,
- PROGEXP,
- TITLE,
- IDEAL_TA,
- DATE,
+ MESSAGE,
+ LAB,
  IP_ADDRESS)
-VALUES (?,?,?,?,?,?,?,?,?, CURRENT_TIMESTAMP, ?);
+VALUES (?,?,?,?,?);
 EOT;
-	if($stmt2 = $mysqli->prepare($sql2))
+if($stmt = $mysqli->prepare($sql))
+{
+	$stmt->bind_param('sssss', $class, $major, $message, $lab, $ip);
+	if($stmt->execute())
 	{
-		$stmt2->bind_param('ssssssssss', $class, $major, $color, $animal, $drink, $place, $progexp, $title, $idealTA, $ip);
-		if($stmt2->execute())
-		{
-			$mysqli->commit();
-			$result = false;
-			$message = 'Got it!';
-		}
-		$stmt2->close();
+		$mysqli->commit();
+		$success = true;
 	}
-}
-else {
-	$message = 'This IP submitted a survey within the last 2 hours!';
+	$stmt->close();
 }
 
-print json_encode(Array('success' => $result, 'message' => $message));
+print json_encode(Array('success' => $success));
 ?>
