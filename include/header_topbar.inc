@@ -47,14 +47,15 @@
 			<!-- Left Nav Section -->
 			<ul class="left">
 				<li class="active"><a class="top-btn" data-target="home">Home</a></li>
+				<li><a class="top-btn" data-target="bio">About</a></li>
 				<li class="has-dropdown">
 					<a href="#">TA Classes</a>
 					<ul class="dropdown">
 						<li><a class="top-btn" data-target="cs145">CSCI 145</a></li>
 					</ul>
 				</li>
-				<li><a class="top-btn" data-target="bio">Bio</a></li>
 				<li><a class="top-btn" data-target="videos">Videos</a></li>
+				<li><a href="http://bio.mcyamaha.com">BioInformatics</a></li>
 			</ul>
 		</section>
 	</nav>
