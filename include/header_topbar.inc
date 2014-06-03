@@ -51,7 +51,7 @@
 				<li class="has-dropdown">
 					<a href="#">Classes</a>
 					<ul class="dropdown">
-						<li><a class="top-btn" data-target="cs145">CSCI 145</a></li>						
+						<li><a class="top-btn" data-target="cs145">CSCI 145</a></li>
 						<li><a class="top-btn" data-target="cs474">CSCI 474</a></li>
 						<li><a class="top-btn" data-target="cs511">CSCI 511</a></li>
 					</ul>
