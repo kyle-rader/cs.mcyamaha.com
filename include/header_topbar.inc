@@ -49,9 +49,11 @@
 				<li class="active"><a class="top-btn" data-target="home">Home</a></li>
 				<li><a class="top-btn" data-target="bio">About</a></li>
 				<li class="has-dropdown">
-					<a href="#">TA Classes</a>
+					<a href="#">Classes</a>
 					<ul class="dropdown">
-						<li><a class="top-btn" data-target="cs145">CSCI 145</a></li>
+						<li><a class="top-btn" data-target="cs145">CSCI 145</a></li>						
+						<li><a class="top-btn" data-target="cs474">CSCI 474</a></li>
+						<li><a class="top-btn" data-target="cs511">CSCI 511</a></li>
 					</ul>
 				</li>
 				<li><a class="top-btn" data-target="videos">Videos</a></li>

@@ -24,7 +24,7 @@ $code  = isset($_POST['code']) ? $_POST['code'] : '';
 $result = false;
 $override = $code == md5($conf['code']);
 
-if ((substr($ip, 0, 11) != $conf['lab_ip']) && !$override)
+if ((substr($ip, 0, 7) != $conf['lab_ip']) && !$override)
 {
 	$message = "You must sign in from a WWU CS Lab.";
 }
