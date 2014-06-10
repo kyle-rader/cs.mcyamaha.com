@@ -41,7 +41,9 @@ td {
 				<tr><td><a href="http://www.bioinformatics.org/pgetoolbox/">Matlab Pop Genetics</a></td></tr>
 				<tr><td><a href="http://www.bioblender.eu/">Bio Blender</a></td></tr>
 				<tr><td><a href="https://developers.google.com/chart/interactive/docs/gallery/motionchart">Google Motion Chart</a></td></tr>
+				<tr><td><a href="http://sorting.at/">Sorting algorithms visualized</a></td></tr>
 			</tbody>
 		</table>
+		<div id="chart_div" style="width: 600px; height: 300px;"></div>
 	</div>
 </div>

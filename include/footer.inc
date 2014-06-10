@@ -3,8 +3,8 @@
 		<div class="left">
 			Kyle W. Rader (425) 241 - 7977
 			<br><br>
-			WWU ACM Activities Coordinator<br>
-			Director of Engineering: <a href="https://secure.agiplanner.com">AgiPlanner</a>
+			WWU <a href="http://acm.wwu.edu">ACM</a> Activities Coordinator<br>
+			Director of Engineering: <a href="https://uzility.com">Uzility</a>
 		</div>
 		<div class="right">
 			<?php print GetIcons(); ?>
